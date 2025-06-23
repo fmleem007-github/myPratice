@@ -1,0 +1,207 @@
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* title_wrap START */
+ #wrap > div.title_wrap {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 30px;
+    padding: 50px;
+    border-bottom: 2px solid #8b8b8b;
+    text-align: center;
+}
+
+/* title_wrap END */
+
+
+/* sign_in_wrap START */
+#wrap > div.sign_in_wrap,
+#wrap > div.sign_up_wrap {
+    text-align: center;
+    display: block;
+
+}
+
+#wrap > div.sign_in_wrap input,
+#wrap > div.sign_up_wrap input {
+    margin-bottom: 3px;
+
+}
+
+#wrap > div.sign_in_wrap a {
+    font-size: .8em;
+    color: #4e4e4e;
+    padding: 10px;
+}
+
+/* sign_in_wrap END */
+
+/* sign_up_wrap START */
+#wrap > div.sign_up_wrap {
+    text-align: center;
+    display: none;
+}
+
+/* sign_up_wrap END */
+
+#wrap div.title_wrap input[type="button"] {
+    color: #4e4e4e;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 0;
+
+}
+
+#left_arrow, #right_arrow {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+#wrap div.todo_list_wrap{
+    text-align: center;
+}
+
+#wrap div.todo_list_wrap .calendar{
+    display: flex;
+    align-items: center;        /* 세로 가운데 정렬 */
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#wrap > div.todo_list_wrap div.todo_listAdd input[type="text"] {
+    border: none; /* 모든 테두리 제거 */
+    border-bottom: 1px solid #4e4e4e; /* 아래쪽 테두리만 추가 */
+    outline: none; /* 포커스 시 아웃라인 제거 */
+    width: 70%; /* 너비 조정 (선택 사항) */
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+
+#wrap > div.todo_list_wrap div.todo_listAdd input[type="text"]:focus {
+    border-bottom: 1px solid #000; /* 포커스 시 색상 변경 (선택 사항) */
+}
+
+#wrap > div.todo_list_wrap div.todo_listAdd button.basic_button:hover {
+    background-color: #e0e0e0; /* 호버 효과 (선택 사항) */
+}
+
+#wrap div.todo_list_wrap text{
+    text-align: center;
+    border-bottom: 1px;
+    
+}
+
+
+.todo_list_wrap div.container{
+    display: flex;
+    align-items: center;        /* 세로 가운데 정렬 */
+    justify-content: space-between;
+    padding: 10px;
+}
+
+div.container div.check{
+    padding: 10px;
+    zoom: 1.5;
+    margin-bottom: 5px;
+}
+
+div.todo_list_wrap .container .txt {
+    flex: 1;                    /* 가능한 만큼 공간 차지 */
+    font-size: 16px;
+    border: 1px solid #dadada;
+    border-radius: 7px;
+    width: 600px;
+    padding: 10px;
+    margin: 2px auto;
+}
+
+.container .modify,
+.container .delete,
+.container .share,
+.container .seeMore{
+    text-align: center;
+    font-size: small;
+    width: 20px;
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;            /* 텍스트 줄바꿈 방지 */
+}
+
+.content .sharebutton,
+.content .closebutton {
+    text-align: center;
+    font-size: small;
+    width: 50px;
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    white-space: nowrap; 
+
+}
+
+/* list_wrap END */
+
+input[name='modify_date']{
+    zoom: 1.5;
+}
+
+input[name='modify_text']{
+    font-size: 16px;
+    border: 1px solid #dadada;
+    border-radius: 7px;
+    width: 600px;
+    padding: 10px;
+    margin: 2px 15px;
+    outline: none; 
+}
+
+
+#model_bg{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0; top: 0;
+    background-color: rgba(0,0,0,.5);
+    display: none;
+}
+
+#model_bg > div.content{
+    margin-top: 300px;
+    text-align: center;
+}
+
+#model_bg > div.content input{
+    font-size: 16px;
+    border: 1px solid #dadada;
+    border-radius: 7px;
+    width: 600px;
+    padding: 10px;
+    margin: 0px auto;
+    outline: none; 
+}
+
+#model_bg > div.content button{
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+#model_bg > div.content div{
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}

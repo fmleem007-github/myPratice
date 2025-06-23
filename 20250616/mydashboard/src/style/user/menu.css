@@ -1,0 +1,17 @@
+div.menu-wrap {
+    border-bottom: 1px solid #dadada;
+    margin-bottom: 50px;
+}
+
+div.menu-wrap > div.items {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1000px;
+}
+
+div.menu-wrap > div.items > div.service,
+div.menu-wrap > div.items > div.member {
+    height: 40px;
+    line-height: 40px;
+}
