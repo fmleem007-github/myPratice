@@ -31,7 +31,7 @@ const TodoWrite = () => {
     const todoChangeHandler = (e) => {
         console.log(`${COMPONENT_NAME}todoChangeHandler()`);
 
-        switch(e.target.name) {
+        switch (e.target.name) {
             case 'todoTxt':
                 setTodoTxt(e.target.value);
                 break;
@@ -46,72 +46,76 @@ const TodoWrite = () => {
 
     }
 
-    return(
+    return (
         <>
             {
                 isRender
-                ?
-                <div className="todo-write-wrap">
-                    <div className="wrap">
-                        <h4>TODO WRITE</h4>
-                        <input 
-                        type="text" 
-                        placeholder="Input new todo" 
-                        value={todoTxt} 
-                        onChange={todoChangeHandler}
-                        name="todoTxt"/>
-                        <input 
-                        type="datetime-local" 
-                        value={todoExpiredDate} 
-                        onChange={todoChangeHandler} 
-                        name='todoExpiredDate' 
-                        style={{width: 'initial'}}/>
-                        <button onClick={() => {
-                            console.log(`${COMPONENT_NAME}REGIST BUTTON CLICKED!!`);
-                            
-                            let signinedId = sessionStorage.getItem('signinedId');
+                    ?
+                    <div className="todo-write-wrap">
+                        <div className="wrap">
+                            <h4>TODO WRITE</h4>
+                            <input
+                                type="text"
+                                placeholder="Input new todo"
+                                value={todoTxt}
+                                onChange={todoChangeHandler}
+                                name="todoTxt" />
+                            <input
+                                type="datetime-local"
+                                value={todoExpiredDate}
+                                onChange={todoChangeHandler}
+                                name='todoExpiredDate'
+                                style={{ width: 'initial' }} />
+                            <button onClick={() => {
+                                console.log(`${COMPONENT_NAME}REGIST BUTTON CLICKED!!`);
 
-                            let todosStr = localStorage.getItem('todos');
-                            if (todosStr === null) {
-                                let todos = {
-                                    [signinedId]: {
-                                        [uuidv4()]: {
-                                            todoTxt, todoExpiredDate,
+                                let signinedId = sessionStorage.getItem('signinedId');
+                                if (!signinedId) {
+                                    console.error("No signinedId in sessionStorage");
+                                    return; // 또는 적절한 에러 처리
+                                }
+
+                                let todoid = uuidv4(); // 또는 다른 ID 생성 방식
+                                let todo = {
+                                    todoTxt: todoTxt || "", // 기본값 처리
+                                    todoExpiredDate: todoExpiredDate || new Date().toISOString(), // 기본값 처리
+                                };
+
+                                let todosStr = localStorage.getItem('todos');
+                                let todos;
+
+                                try {
+                                    if (todosStr === null) {
+                                        // 데이터가 없는 경우 → 새로 생성
+                                        todos = {
+                                            [signinedId]: { [todoid]: todo },
+                                        };
+                                    } else {
+                                        // 데이터가 있는 경우 → 파싱 후 업데이트
+                                        todos = JSON.parse(todosStr);
+                                        if (!todos[signinedId]) {
+                                            // 현재 사용자의 할 일 목록이 없는 경우
+                                            todos[signinedId] = { [todoid]: todo };
+                                        } else {
+                                            // 현재 사용자의 할 일 목록이 있는 경우
+                                            todos[signinedId][todoid] = todo;
                                         }
                                     }
-                                }
-                                localStorage.setItem('todos', JSON.stringify(todos));
-                            } else {
-                                let todos = JSON.parse(todosStr);
-                                let myTodos = todos[signinedId];
-                                if (myTodos === undefined) {
-                                    myTodos = {
-                                        // [signinedId]: {
-                                            [uuidv4()]: {
-                                                todoTxt, todoExpiredDate,
-                                            }
-                                        // }
-                                    }
                                     localStorage.setItem('todos', JSON.stringify(todos));
-                                } else {
-                                    myTodos[uuidv4()] = {
-                                        todoTxt, todoExpiredDate,
-                                    }
-                                    localStorage.setItem('todos', JSON.stringify(todos));
+                                } catch (error) {
+                                    console.error("Error processing todos:", error);
                                 }
-                            }
+                                alert('TODO REGIST SUCCESS!!');
+                                navigator('/todolist/list');
 
-                            alert('TODO REGIST SUCCESS!!');
-                            navigator('/todolist/list');
-
-                        }}>REGIST</button>
+                            }}>REGIST</button>
+                        </div>
                     </div>
-                </div>
-                :
-                <></>
+                    :
+                    <></>
             }
         </>
-        
+
     );
 }
 
