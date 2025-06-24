@@ -71,8 +71,8 @@ const TodoWrite = () => {
                             
                             let signinedId = sessionStorage.getItem('signinedId');
 
-                            let todos = localStorage.getItem('todos');
-                            if (todos === null) {
+                            let todosStr = localStorage.getItem('todos');
+                            if (todosStr === null) {
                                 let todos = {
                                     [signinedId]: {
                                         [uuidv4()]: {
@@ -82,15 +82,15 @@ const TodoWrite = () => {
                                 }
                                 localStorage.setItem('todos', JSON.stringify(todos));
                             } else {
-                                todos = JSON.parse(todos);
+                                let todos = JSON.parse(todosStr);
                                 let myTodos = todos[signinedId];
                                 if (myTodos === undefined) {
                                     myTodos = {
-                                        [signinedId]: {
+                                        // [signinedId]: {
                                             [uuidv4()]: {
                                                 todoTxt, todoExpiredDate,
                                             }
-                                        }
+                                        // }
                                     }
                                     localStorage.setItem('todos', JSON.stringify(todos));
                                 } else {

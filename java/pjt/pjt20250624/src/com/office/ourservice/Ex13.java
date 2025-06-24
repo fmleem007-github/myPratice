@@ -1,0 +1,21 @@
+package com.office.ourservice;
+
+import java.util.Arrays;
+
+//실행 결과를 보고 pi, flag, myScore 변수가 다음과 출력되도록 코딩하자. 실행 결과
+//pi: 3.14
+//flag: true
+//myScore: (4) [90, 100, 70, 60]
+public class ex13 {
+
+	public static void main(String[] args) {
+		float pi = 3.14f;
+		boolean flag = true;
+		int[] myScore= {90, 100, 70, 60};
+		
+		System.out.printf("pi: %3.2f%n", pi);
+		System.out.printf("flag: "+flag+ "\n");
+		System.out.printf("myScore: "+Arrays.toString(myScore));
+	}
+
+}
