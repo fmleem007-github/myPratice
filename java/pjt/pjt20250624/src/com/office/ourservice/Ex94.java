@@ -53,6 +53,7 @@ public class ex94 {
         System.out.printf("Total: %d명\n", totalPeople);
         System.out.printf("TotalPrice : %,d원\n", totalPrice);
         System.out.println("========================================");
+        scanner.close();
 	}
 
 }

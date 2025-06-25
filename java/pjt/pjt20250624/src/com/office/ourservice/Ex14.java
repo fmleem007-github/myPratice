@@ -12,6 +12,8 @@ public class ex14 {
 		
 		System.out.printf("num1 = %d%n", num1);
 		System.out.printf("num2 = %d%n", num2);
+		System.out.printf("num1 + num2 = %d%n", num1+num2);
+		System.out.printf("num1 + num2 = %s%s%n", Integer.toString(num1),Integer.toString(num2));
 
 	}
 

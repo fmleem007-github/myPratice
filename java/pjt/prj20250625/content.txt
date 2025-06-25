@@ -1,0 +1,36 @@
+java:객체지향 프로그래밍 언어(Object Oriented Programming)
+일상생활?
+객체 유기적:
+객체 =(속성 + 기능)(변수 method
+ Car.java ->Car.class -> JVM
+ public 접근제한자
+ private
+ 
+ void:반활할 데이타가없다
+ 
+ 생성자 overload
+ 	public static void main(String[] args) {
+		java.util.Scanner scanner = new Scanner(System.in);
+		System.out.print("input year:");
+		int	year = scanner.nextInt();
+		
+		if( isLeapYear( year) )
+			System.out.printf(("%d)년은 윤년입니다.");
+			else
+			System.out.printf(("%d)년은 윤년이 아닙니다.");
+ //- 연도가 4로 나누어떨어지고 100으로 나누어떨어지지 않으면 윤년이다.
+//- 또는 연도가 400으로 나누어떨어지면 윤년이다.
+public class Ex67 {
+	
+	public Boolean isLeapYear( int year) {
+		if((year % 4) == 0) {
+			if(((year %100) != 0) || ((year %400) == 0))
+					return true;
+			else
+				return false;
+		}
+	}
+	}
+
+}
+ 

@@ -15,10 +15,14 @@ public class ex12 {
         double pi = 3.14;
 
         // 여행 가고픈 나라 (문자열)
-        String country = "캐나다";
+        String  country = "캐나다";
 
         // 성인 여부 (논리형)
         boolean isAdult = true;
+        System.out.println(score);
+        System.out.println(pi);
+        System.out.println(country);
+        System.out.println(isAdult);
 	}
 
 }
