@@ -1,20 +1,20 @@
-package com.office.ourservice;
-//7. 다음의 문구를 출력한다고 할 때 반복되는 데이터를 변수로 정의해 보자. 
-//홍길동 고객님께. 홍길동 고객님 안녕하세요. 
-//고객님께서 접수하신 A/S건에 대해서 연락을 드렸으나 연락이 어려워 메일 드립니다. … 중략 … 
-//A/S 접수 내용
-//성함 : 홍길동
-//내용 : 에어컨 고장
-public class ex07 {
-	String Msg = "";
-
-	public static void main(String[] args) {
-		String name = "홍길동";
-		String msg = String.format("%s 고객님께. %s 고객님 안녕하세요.%nA/S 접수 내용\r\n"
-				+ "//성함 : %s\r\n"
-				+ "//내용 : 에어컨 고장 ", name, name,name);
-		
-		System.out.println(msg);
-	}
-
-}
+//package com.office.ourservice;
+////7. 다음의 문구를 출력한다고 할 때 반복되는 데이터를 변수로 정의해 보자. 
+////홍길동 고객님께. 홍길동 고객님 안녕하세요. 
+////고객님께서 접수하신 A/S건에 대해서 연락을 드렸으나 연락이 어려워 메일 드립니다. … 중략 … 
+////A/S 접수 내용
+////성함 : 홍길동
+////내용 : 에어컨 고장
+//public class ex07 {
+//	String Msg = "";
+//
+//	public static void main(String[] args) {
+//		String name = "홍길동";
+//		String msg = String.format("%s 고객님께. %s 고객님 안녕하세요.%nA/S 접수 내용\r\n"
+//				+ "//성함 : %s\r\n"
+//				+ "//내용 : 에어컨 고장 ", name, name,name);
+//		
+//		System.out.println(msg);
+//	}
+//
+//}

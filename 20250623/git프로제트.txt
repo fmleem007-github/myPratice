@@ -1,0 +1,73 @@
+Git으로 팀 프로젝트를 효율적으로 관리하는 방법을 단계별로 정리해 드리겠습니다. 🛠️
+
+1. 저장소(Repository) 설정
+중앙 저장소 생성: GitHub, GitLab, Bitbucket 등에 팀 전용 원격 저장소를 만들고, main(또는 master) 브랜치를 기본으로 설정합니다.
+
+권한 관리: 팀원별로 접근 권한을 설정 (예: Maintainer/Developer 권한 부여).
+
+2. 브랜치 전략 수립 (가장 널리 쓰이는 Git Flow 예시)
+main/master: 배포 가능한 안정된 버전만 유지.
+
+develop: 다음 배포를 위한 개발 브랜치. 모든 기능은 여기로 머지됩니다.
+
+feature/기능명: 개별 기능 개발 시 생성 (예: feature/login).
+
+release/버전: 배포 전 테스트용 브랜치.
+
+hotfix/버그명: 긴급 버그 수정용.
+
+💡 단순화된 전략을 원하면 GitHub Flow (PR 중심)를 사용해도 됩니다.
+
+3. 작업 흐름 예시
+시작 전: 최신 develop 브랜치를 pull 받습니다.
+
+bash
+git pull origin develop
+기능 개발:
+
+bash
+git checkout -b feature/login  # 새 기능 브랜치 생성
+git add . && git commit -m "로그인 버튼 추가"  # 커밋
+git push origin feature/login  # 원격에 푸시
+PR(Pull Request) 생성:
+
+GitHub/GitLab에서 feature/login → develop으로 PR을 열고, 팀원들의 코드 리뷰를 받습니다.
+
+머지 후 브랜치 삭제:
+
+리뷰 완료 후 develop에 머지하고, 원격 브랜치는 정리합니다.
+
+4. 필수 규칙
+커밋 컨벤션:
+
+plaintext
+feat: 로그인 기능 추가  
+fix: 회원가입 버그 수정  
+docs: README 업데이트  
+(예: feat, fix, docs, style, refactor 등)
+
+.gitignore: 빌드 파일, IDE 설정, 노드 모듈 등 무시할 파일을 추가합니다.
+
+충돌 해결: PR 전에 로컬에서 git rebase develop으로 최신 코드 반영 후 충돌을 수정합니다.
+
+5. 협업 도구 활용
+이슈 트래커: GitHub Issues, Jira로 작업 할당 및 진행 상황 관리.
+
+코드 리뷰: PR에서 팀원이 코멘트로 피드백.
+
+CI/CD: GitHub Actions, GitLab CI로 자동 테스트/배포 설정.
+
+6. 문제 상황 대처법
+잘못된 커밋:
+
+bash
+git commit --amend        # 최신 커밋 수정
+git rebase -i HEAD~3      # 과거 커밋 편집 (주의!)
+강제 푸시 사고: 팀원들과 동기화 후 git reflog로 복구.
+
+📌 핵심 Tips
+작은 단위로 자주 커밋하고, 의미 있는 메시지를 작성하세요.
+
+PR은 작게 유지해 리뷰를 용이하게 합니다.
+
+정기적으로 develop 브랜치와 동기화하세요.
