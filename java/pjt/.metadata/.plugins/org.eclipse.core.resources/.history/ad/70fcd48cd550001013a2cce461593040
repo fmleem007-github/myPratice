@@ -1,0 +1,39 @@
+package com.office.ourservice;
+
+//9. 삼각형의 넓이를 계산하기 위한 가로(20cm), 세로(15cm) 변수를 정의하고 계산 결과를 출
+//력해 보자. 
+//10. 위에서(9번) 정의한 변수를 이용해서 사각형의 넓이를 출력해 보자. 
+//11. 가로, 세로의 길이를 임의로 변경한 후 삼각형과 사각형의 넓이를 각각 출력해 보자.
+
+public class ex09 {
+
+	public static void main(String[] args) {
+		public class AreaCalculator {
+		    public static void main(String[] args) {
+
+		        // 9. 삼각형의 넓이 계산 (초기값: 20cm, 15cm)
+		        double width = 20.0;
+		        double height = 15.0;
+
+		        double triangleArea = (width * height) / 2;
+		        System.out.println("삼각형 넓이: " + triangleArea + " cm²");
+
+		        // 10. 같은 값으로 사각형 넓이 계산
+		        double rectangleArea = width * height;
+		        System.out.println("사각형 넓이: " + rectangleArea + " cm²");
+
+		        // 11. 가로, 세로 길이 변경
+		        width = 12.5;
+		        height = 9.3;
+
+		        triangleArea = (width * height) / 2;
+		        rectangleArea = width * height;
+
+		        System.out.println("변경된 삼각형 넓이: " + triangleArea + " cm²");
+		        System.out.println("변경된 사각형 넓이: " + rectangleArea + " cm²");
+		    }
+		}
+
+	}
+
+}

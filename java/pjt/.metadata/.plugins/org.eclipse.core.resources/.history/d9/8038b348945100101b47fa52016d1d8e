@@ -1,0 +1,34 @@
+package com.office.clone;
+
+import com.office.ourschool.NewStudent;
+
+public class StudentManager {
+
+	   // 데이터타입[] 배열변수명 = new 데이터타입[배열의길이]
+	   
+	   // 속성
+	   NewStudent[] students = new NewStudent[2];
+	   
+	   // 생성자
+	   
+	   
+	   // 기능
+	   public void printStudentInfo(int idx) {
+	      System.out.println("[StudentManager] printStudentInfo()");
+	      students[idx].printInfo();
+	      
+	   }
+	   
+	   public void printAllStudentInfo() {
+	      System.out.println("[StudentManager] printAllStudentInfo()");
+	      for (int i = 0; i < students.length; i++) {
+	         students[i].printInfo();
+	      }
+	   }
+	   
+	   public void addNewStudentAtStudents(int idx, NewStudent newStudent) {
+	      this.students[idx] = newStudent;
+	      
+	   }
+	   
+	}

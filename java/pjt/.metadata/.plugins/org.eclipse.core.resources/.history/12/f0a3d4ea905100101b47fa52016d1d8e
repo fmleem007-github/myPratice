@@ -1,0 +1,11 @@
+package com.office.ourschool;
+
+public class StudentManager {
+	public void printStudentInfo() {
+		
+	}
+	public void printAllStudentInfo() {
+		
+	}
+
+}

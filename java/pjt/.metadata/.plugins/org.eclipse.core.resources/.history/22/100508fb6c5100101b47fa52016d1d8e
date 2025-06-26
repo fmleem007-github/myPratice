@@ -1,0 +1,12 @@
+package com.office.school;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		Student student = new Student();
+		
+		student.printInfo();
+
+	}
+
+}

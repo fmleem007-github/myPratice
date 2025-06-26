@@ -1,0 +1,23 @@
+package com.office.ourservice;
+
+//79. 학급별 학생 수를 나타낸 배열을 이용해서, 요구 사항에 맞는 데이터를 출력하는 프로그램을 만들어보자
+//const studentCount = [{cls01: 18}, {cls02: 21}, {cls03: 20}, {cls04: 19}, {cls05: 22},
+//{cls06: 20}, {cls07: 23}, {cls08: 17}]
+//1) 전체 학생 수
+//2) 평균 학생 수
+//3) 학생 수가 가장 적은 학급
+//4) 학생 수가 가장 많은 학급
+//5) 학급별 학생 편차
+public class ex79 {
+
+	public static void main(String[] args) {
+		int[] studentCount = {18,  20, 19, 22, 20, 23,  17};
+		int total=0;
+		for( int num : studentCount) {
+			total = total + num;
+		}
+		System.out.println("total:"+total);
+
+	}
+
+}

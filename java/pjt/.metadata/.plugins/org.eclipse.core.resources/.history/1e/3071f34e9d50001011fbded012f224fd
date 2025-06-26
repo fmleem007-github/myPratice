@@ -1,0 +1,15 @@
+package com.office.ourservice;
+
+public class ArrayEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] numbers = {1, 2, 3, 4, 5};
+		String[] fruits = {"apple", "banana", "cherry"};
+		int numbers2[] = {1, 2, 3, 4, 5};
+		String fruits2[] = {"apple", "banana", "cherry"};
+		int numbers3[] = new int[] {1, 2, 3, 4, 5};
+System.out.println(numbers3.toString());
+	}
+
+}

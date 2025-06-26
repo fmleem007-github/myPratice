@@ -1,0 +1,20 @@
+package com.office.ems;
+
+public class NewStudent {
+	int grade;		//학년
+	int classNo;	//반번호
+	int studentNo;	//개인번호
+	String studentName;	//학생이름
+	boolean absence;//휴학구분
+	
+	public NewStudent(int classNo,int studentNo,String studentName ) {
+		grade = 1;
+		absence = false;
+		
+	}
+	
+	public void Printnfo() {
+		
+	}
+
+}

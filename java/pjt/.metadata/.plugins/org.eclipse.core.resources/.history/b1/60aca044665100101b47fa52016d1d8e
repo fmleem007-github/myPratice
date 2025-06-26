@@ -1,0 +1,10 @@
+package com.office.ourservice;
+
+public class Car {
+	//생성자(constructor)
+	public Car() {
+		
+	}
+	
+
+}

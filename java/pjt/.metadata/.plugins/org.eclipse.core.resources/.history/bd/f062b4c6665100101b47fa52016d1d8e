@@ -1,0 +1,20 @@
+package com.office.ourservice;
+
+public class Car {
+	//속성ㅣ 길이, 색상
+	int carLength = 2;
+	String carColor = "red";
+	
+	//생성자(constructor)
+	public Car() {
+		
+		//기능
+		public void GoForeward() {
+		
+	}
+		public void GoBackward() {
+			
+		}
+	}
+
+}

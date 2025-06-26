@@ -1,0 +1,20 @@
+package com.office.ourservice;
+
+public class LeapYear {
+	/*
+	public LeapYear() {
+		
+	}*/
+	public boolean isLeapYear( int year) {
+		boolean ret = false;
+		if((year % 4) == 0) {
+			if(((year %100) != 0) || ((year %400) == 0))
+					ret = true;
+			else
+				ret = false;
+		}
+		return ret;
+	}
+}
+
+	

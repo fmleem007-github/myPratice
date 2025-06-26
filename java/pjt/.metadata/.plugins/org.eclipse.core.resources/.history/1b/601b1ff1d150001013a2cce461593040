@@ -1,0 +1,72 @@
+package com.office.ourservice;
+public class Ex69 {
+	 public static final int MARGIN = 1;
+    Boolean a_time(int hour) {
+        int start = 6 * 60;
+        int end = 23 * 60;
+        int cur = start;
+
+        do {
+            cur += 15;
+            if ( ((hour-MARGIN) <=cur) &&(cur <= (hour+MARGIN))) {
+//            	System.out.printf("A %d버스 도착(%d)%n", cur, hour);
+                return true;
+            }
+        } while (cur < end);
+        return false;
+    }
+
+    Boolean b_time(int hour) {
+        int start = 6 * 60;
+        int end = 23 * 60;
+        int cur = start;
+
+        do {
+            cur += 13;
+            if ( ((hour-MARGIN) <=cur) &&(cur <= (hour+MARGIN))) {
+//             	System.out.printf("B %d버스 도착(%d)%n", cur, hour);
+                return true;
+            }
+        } while (cur < end);
+        return false;
+    }
+
+    Boolean c_time(int hour) {
+        int start = 6 * 60 + 20;
+        int end = 22 * 60;
+        int cur = start;
+
+        do {
+            cur += 8;
+            if ( ((hour-MARGIN) <=cur) &&(cur <= (hour+MARGIN))) {
+//             	System.out.printf("C %d버스 도착(%d)%n", cur, hour);
+                return true;
+            }
+        } while (cur < end);
+        return false;
+    }
+
+    public static void main(String[] args) {
+    	int	cnt;
+        Ex69 obj = new Ex69();  // 객체 생성
+
+        System.out.println("A, B, C 버스가 모두 겹치는 시간:");
+
+        for (int i = 6*60; i < 23*60; i+= 10) {
+        	cnt = 0;
+        	if( obj.a_time(i)) {
+        		cnt++;
+        	}
+        
+        	if( obj.b_time(i)) {
+        		cnt++;
+        	}
+        	if( obj.c_time(i)) {
+        		cnt++;
+        	}
+            if (cnt >= 3) {
+                System.out.printf("%d시 %d분에 겹칩니다(%d).\n",i/60, i%60, cnt);
+            }
+        }
+    }
+}

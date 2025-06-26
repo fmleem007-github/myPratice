@@ -1,0 +1,33 @@
+package com.office.ourservice;
+//import java.util.Arrays;
+import java.util.Random;
+
+
+public class ArrayEx {
+
+	public static void main(String[] args) {
+		String str = "";
+		Random rand = new Random();
+
+        // 3차원배열
+		//학생(1,2,3,4),학기(1,2,3학기), 과목(국어,영어,수학)
+		int[][][] scores = new int[4][3][3];
+		String[] student = {"길동", "찬호", "흥민", "강인"};
+		
+		for(int i=0; i< scores.length; i++) {
+			System.out.printf("학생:%s%n",student[i]);
+			for(int j=0; j < scores[i].length; j++) {
+				System.out.println("=======================");
+				System.out.printf("%d 학기%n",j+1);
+				System.out.println("\t국어 \t영어 \t수학");
+				
+					scores[i][j][k] = rand.nextInt(50)+50;
+					System.out.printf(\t"%ㅇd, scores[i][j][k] );
+				}
+				System.out.println("%n--------------");
+			}
+			System.out.println("============");
+		}
+	
+	}
+}

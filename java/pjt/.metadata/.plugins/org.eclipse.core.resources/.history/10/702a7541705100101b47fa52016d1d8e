@@ -1,0 +1,30 @@
+package com.office.school;
+
+public class Student {
+	//속성
+	String name;	//이름
+	int grade;	//학년
+	int age;	//나이
+	String major;	//전공
+	float score;	// 학점
+	
+	//생성자
+	public Student() {
+		name = "홍길동";
+		grade = 1;
+		age = 16;
+		major = "computer";
+
+	}
+	
+	//기능
+	public void printInfo() {
+		System.out.println("name:" +name);
+		System.out.println("grade:" +grade);
+		System.out.println("age:" +age);
+		System.out.println("major:" +major);
+		System.out.println("score:" +score);
+		
+	}
+
+}

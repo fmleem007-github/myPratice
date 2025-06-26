@@ -1,0 +1,26 @@
+package com.office.ourservice;
+import jsva.util.Scanner;
+//- 연도가 4로 나누어떨어지고 100으로 나누어떨어지지 않으면 윤년이다.
+//- 또는 연도가 400으로 나누어떨어지면 윤년이다.
+public class Ex67 {
+	
+	public Boolean isLeapYear( int year) {
+		if((year % 4) == 0) {
+			if(((year %100) != 0) || ((year %400) == 0))
+					return true;
+			else
+				return false;
+		}
+	}
+	public static void main(String[] args) {
+		java.util.Scanner scanner = new Scanner(System.in);
+		System.out.print("input year:");
+		int	year = scanner.nextInt();
+		
+		if( isLeapYear( year) )
+			System.out.printf(("%d)년은 윤년입니다.");
+			else
+			System.out.printf(("%d)년은 윤년이 아닙니다.");
+	}
+
+}

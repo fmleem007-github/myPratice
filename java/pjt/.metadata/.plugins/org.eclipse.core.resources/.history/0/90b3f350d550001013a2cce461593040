@@ -1,0 +1,15 @@
+package com.office.ourservice;
+
+//9. 삼각형의 넓이를 계산하기 위한 가로(20cm), 세로(15cm) 변수를 정의하고 계산 결과를 출
+//력해 보자. 
+//10. 위에서(9번) 정의한 변수를 이용해서 사각형의 넓이를 출력해 보자. 
+//11. 가로, 세로의 길이를 임의로 변경한 후 삼각형과 사각형의 넓이를 각각 출력해 보자.
+
+public class ex09 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

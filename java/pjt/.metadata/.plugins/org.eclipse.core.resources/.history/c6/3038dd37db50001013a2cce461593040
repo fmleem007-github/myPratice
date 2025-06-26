@@ -1,0 +1,11 @@
+package com.office.ourservice;
+
+//94. 다음과 같이 출력 될 수 있도록 비행기 티켓 영수증 출력 프로그램을 만들어 보자.
+public class ex94 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

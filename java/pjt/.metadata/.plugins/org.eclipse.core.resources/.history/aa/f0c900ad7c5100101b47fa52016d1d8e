@@ -1,0 +1,35 @@
+package com.office.school;
+
+import java.util.Scanner;
+
+import com.office.ourservice.LeapYear;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		/*
+		Student student = new Student();
+		Student student2 = new Student("박찬호",1, 17, "computer", 3.5f);
+		Student student3 = new Student("홍길동",2,16,"sports", 2.0f);
+		Student student4 = new Student("임환묵", 3,61,"정치외교",4.5f);
+		
+		student.printInfo();
+		student2.printInfo();
+		student3.printInfo();
+		student4.printInfo();
+		*/
+		LeapYear lp = new LeapYear();
+		Scanner scanner = new Scanner(System.in);
+		2025
+		System.out.println("년도를 임력하세요.");
+		int year = scanner.nextInt();
+		
+		if( lp.isLeapYear( year) )
+			System.out.printf("%d년은 윤년입니다.", year);
+			else
+			System.out.printf("%d년은 윤년이 아닙니다.", year);		
+		
+
+	}
+
+}

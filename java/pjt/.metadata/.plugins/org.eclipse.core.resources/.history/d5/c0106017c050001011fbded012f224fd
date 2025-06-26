@@ -1,0 +1,18 @@
+package com.office.ourservice;
+
+//96. 수입과 공과금을 입력하면 공과금 총액과 수입 대비 공과금 비율을 계산하는 프로그램을 만들어보자.
+public class ex96 {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		//수입입력
+		//수도요금입력
+		//전기요금입력
+		//가스요금입력
+//		공과금
+//		공과금비율
+
+	}
+
+}

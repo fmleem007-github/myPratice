@@ -1,0 +1,15 @@
+package com.office.ourservice;
+
+//12. 다음에 맞는 변수를 선언해 보자.
+//- 시험 성적(100)
+//- 원주율(3.14)
+//- 여행 가고픈 나라(캐나다)
+//- 성인을 구분하기 위한 변수(성인: true, 미성년: false)
+public class ex12 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
