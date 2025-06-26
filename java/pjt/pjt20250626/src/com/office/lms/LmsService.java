@@ -73,26 +73,5 @@ public class LmsService {
 		
 		
 	}
-
-	public void updateStudent() {
-		LmsDB lmsDB = LmsDB.getLmsDBInstance();
-		HashMap<String, Student> studentDB 
-				= lmsDB.getStudentDB();
-		
-		for (String sId : studentDB.keySet()) {
-			Student student = studentDB.get(sId);
-			System.out.println("=================================");
-			System.out.println("ID: " + student.getsId());
-			System.out.println("Name: " + student.getsName());
-			System.out.println("Mail: " + student.getsMail());
-			System.out.println("Phone: " + student.getsPhone());
-			System.out.println("=================================");
-		}
-	}
-
-	public Student getStudent(String sId) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	
 }

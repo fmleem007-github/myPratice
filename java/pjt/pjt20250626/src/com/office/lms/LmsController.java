@@ -58,11 +58,8 @@ public class LmsController {
 				
 				break;
 			case Config.STUDENT_UPDATE:
-				lmsService.updateStudent();
-				System.out.println("학생ID 입력: ");
-				scanner.nextLine();
-				sId = scanner.nextLine();				
-				Student student2 = lmsService.getStudent(sId);				
+				
+				
 				
 				break;
 			case Config.STUDENT_DELETE:

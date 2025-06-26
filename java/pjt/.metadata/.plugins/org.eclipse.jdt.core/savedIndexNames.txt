@@ -1,4 +1,4 @@
-INDEX VERSION 1.134+C:\MyPratice\java\pjt\.metadata\.plugins\org.eclipse.jdt.core
-1865797976.index
+INDEX VERSION 1.134+E:\myPratice\myPratice\java\pjt\.metadata\.plugins\org.eclipse.jdt.core
 1794327832.index
-2231182388.index
+1865797976.index
+502560142.index
